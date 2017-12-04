@@ -1,0 +1,29 @@
+/**
+ * Created by Pravin on 12/04/17.
+ */
+
+{
+  "name": "Pravin",
+  "version": "1.0.0",
+  "description": "My New Web",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "prestart": "npm install",
+    "start": "grunt"
+  },
+  "dependencies": {
+    "body-parser": "1.15.0",
+    "express": "4.13.4",
+    "mongoose": "4.4.10",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0"
+  },
+  "author": "pravin dagde",
+  "license": "ISC"
+}
