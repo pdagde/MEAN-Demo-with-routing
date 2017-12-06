@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar Code</title>
+	<meta charset="utf=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/crive/css/style.css">
+</head>
+	<body>
+		<header>
+			<div class="wrapper padd-h-none">
+				<div class="col-lg-12 col-md-12 col-sm-12 logoWrapper padd-h-none">
+					<div class="main-logo">
+						<a class="border-bottom-none" href="#">
+							<img src="assets/img/brand/crive-mini.png" height="50px">
+							<h2>Calendar <br>code</h2>
+						</a>
+					</div>
+					<div class="head-close-icon pull-right">
+						<i class="ion-ios-close"></i>
+					</div><!-- pull-right end -->
+				</div><!-- col end -->
+			</div> <!-- wrapper end -->
+		</header>	<!-- header end -->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="fixed-wrapper">
+				<div class="heading text-center">
+					<h2>Confirm your email</h2>
+					<h5>Please enter the verification code received on <a >{{UserRecords.email}}</a></h5>
+				</div>
+				<div class="form-control">
+					<form>
+						<label>Verification code</label>
+						<input type="password" placeholder="code" ng-model="verification.code">
+						<label>Notes</label>
+						<textarea placeholder="Example - Please do bring your laptops along"></textarea>
+					</form>
+				</div>
+				<div class="contact-form-border">
+				<div class="btn-border"></div>
+				<div class="border-para text-center"><p>OR</p></div>
+				<div class="social-wrapper">
+					<ul class="unordered-list text-center relative">
+						<li class="fb-icon inline-block"><a href="#"><i class="ion-social-facebook"></i></a></li>
+						<li class="twit-icon inline-block"><a href="#"><i class="ion-social-twitter"></i></a></li>
+						<li class="google-icon inline-block"><a href="#"><i class="ion-social-googleplus"></i></a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="text-center bottom-btn">
+					<button class="btn btn-primary" ng-click="checkverificationCode()">Confirm</button>
+				</div>
+				<div class="resend-link">
+					<a href="#" ng-click="resendcode()">Resend Link</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

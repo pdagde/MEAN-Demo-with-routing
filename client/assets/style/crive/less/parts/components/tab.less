@@ -1,0 +1,122 @@
+.tab-head{ // ------- Tab to change view of questions
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  li{
+  	display: inline-block;
+  	margin: 0;
+  	position: relative;
+  	cursor: pointer;
+  	text-align: center;
+  	.transition;
+
+  	&.active{
+  		pointer-events: none;
+  	}
+    &:before{
+      border-color: transparent;
+    }
+  }
+} // tab head
+
+.tab-holder {
+  width: 100%;
+}
+
+.tab-content {
+  display: none;
+}
+
+
+.tab-head-primary{
+  li{
+      height: @space * 3;
+      background-color: lighten(@gray-color, 3%);
+      border: 1px solid darken(@gray-color, 5%);
+      border-left: none;
+      border-top: 1px solid transparent;
+      color: @dark-gray-color;
+      text-transform: uppercase;
+      font-size: @font-size - 2;
+      vertical-align: middle;
+    &:hover{
+      color: darken(@dark-gray-color, 25%);
+    }
+    &.active{
+      background-color: transparent;
+      color: @brand-color;
+      border-bottom-color: transparent;
+      border-top: 1px solid @brand-color;
+    }
+    &:last-child{
+      border-right: none;
+    }
+  } // li
+} // tab head primary
+
+
+.tab-head-secondary{
+  border-bottom: 1px solid darken(@gray-color, 10%);
+	li{
+		min-width: 50px;
+		.size(auto, auto);
+		background-color: transparent;
+    text-transform: uppercase;
+    font-size: @font-size - 3;
+		border-bottom: 1px solid transparent;
+		color: @dark-gray-color;
+		padding: 9.5px 0;
+		margin-right: @space;
+    &:last-child{
+      margin-right: 0;
+    }
+		&:hover{
+			color: darken(@dark-gray-color, 30%);
+			border-bottom-color: @dark-gray-color; 
+		}
+		&.active{
+			color: @brand-color;
+			border-bottom-color: @brand-color;
+		}
+	} // li
+} // tab head secondary
+
+.side-panel{
+  .tab-head-primary, .tab-head-primary li{
+    height: 45px;
+  }
+  .tab-head-primary{
+    li{
+        width: 50%;
+        background-color: lighten(@dark-color, 5%);
+        border-bottom: 1px solid lighten(@dark-color, 15%);
+        color: @dark-gray-color;
+      &:hover{
+        color: @light-color;
+      }
+      &.active{
+        background-color: transparent;
+        color: @light-color;
+        border-top-color: transparent;
+      }
+      &:first-child{
+        border-right: 1px solid lighten(@dark-color, 15%);
+      }
+    } // li
+  } // tab head primary
+} // side panel
+
+
+.cart-tab{ // used on course cart page to make cart right
+  float: right;
+}
+
+// --------------------------------- overflow property for solution tab-contents
+.solution-accordion-content, .test-accordion-content{
+  height: 400px;
+  .height-calc(219px);
+}
+.test-accordion-content{
+  .height-calc(267px);
+}

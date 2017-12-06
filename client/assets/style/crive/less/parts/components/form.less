@@ -1,0 +1,58 @@
+.crive-form-input-box{
+	margin-bottom: 32px;
+	position: relative;
+	text-align:left;
+	.crive-form-label{
+		font-size: 16px;
+	  	letter-spacing: 0.3px;
+	  	color: #7d7d7d;
+	  	font-weight:normal;
+	  	position: absolute;
+    	left: 12px;
+    	top: 10px;
+    	opacity: 0;
+    	//z-index:-1;
+    	//.crive-transition(0.3s);
+	  	&.label-transition{
+	  		font-size: 12px;
+		  	letter-spacing: 0.2px;
+		  	color: rgba(0, 0, 0, 0.6);
+		  	top: -20px;
+		  	opacity: 1;
+		  	//z-index:1;
+	  	}
+	}
+	input[type="text"], input[type="email"], input[type="password"], textarea, select{
+		width:100%;
+		height: 40px;
+		padding: 10px 12px;
+		border: 1px solid #c5c4c4; 
+		border-radius: 3px;
+		font-size: 16px;
+	  	letter-spacing: 0.3px;
+	  	color: rgba(0, 0, 0, 0.6);
+	  	font-weight:300;
+	  	outline: none;
+	  	background: #fff;
+	  	&.crive-form-error{
+	  		// color: @error-color;
+	  		// border-color: @error-color;
+	  	}
+	  	&.crive-form-success{
+	  		// border-color: @success-color;
+	  		// color: @success-color;
+	  	}
+	} 
+	textarea{
+		resize:none;
+		min-height: 120px;
+		height: auto;
+	}
+	.crive-input-error{
+		// color:@error-color;
+		font-size:14px;
+		visibility:hidden;
+	}
+}
+
+// index-page form element

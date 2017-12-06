@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     });
 
     // log something
-    grunt.log.write('Hello world! Welcome to Tutorialspoint!!\n');
+    grunt.log.write('Hello world! Welcome to calender code created by Pravin!!\n');
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');

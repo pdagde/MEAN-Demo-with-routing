@@ -1,0 +1,85 @@
+header {
+  background-color: #1c283e;
+  height: 60px;
+}
+header.crive-header-sticky {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+header.crive-header-scroll {
+  display: none;
+}
+header.crive-header-transparent {
+  height: 350px;
+  background-image: url("../../../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header.crive-header-transparent .crive-header-logo,
+header.crive-header-transparent .crive-header-menu {
+  padding: 20px 0;
+}
+header.crive-header-transparent .crive-header-expanded {
+  padding-top: 72px;
+}
+header.crive-header-transparent .crive-header-expanded h2 {
+  margin: 8px 0;
+  font-size: 32px;
+  letter-spacing: 0.7px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: normal;
+  width: 60%;
+  display: inline-block;
+  line-height: 1.5;
+}
+header.crive-header-transparent .crive-header-expanded p {
+  opacity: 0.7;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  font-weight: normal;
+  margin: 12px 0;
+  width: 60%;
+  display: inline-block;
+}
+header.crive-header-transparent .crive-header-expanded button {
+  float: right;
+  font-weight: normal;
+  margin: 24px 0;
+}
+.crive-header-menu {
+  display: inline-block;
+  float: right;
+}
+.crive-header-menu ul {
+  padding: 0;
+}
+.crive-header-menu ul li {
+  display: inline-block;
+  padding: 12px 4px;
+}
+.crive-header-menu ul li a {
+  display: inline-block;
+  opacity: 0.5;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 20px;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+.crive-header-menu ul li a.crive-header-signup {
+  background-color: #df384f;
+  color: #fff;
+  opacity: 1;
+}
+.crive-header-menu ul li a:hover,
+.crive-header-menu ul li a.active {
+  opacity: 1;
+}

@@ -3,4 +3,4 @@
  */
 
 'use strict'
-var app = angular.module('appIndex',['appMain','appProfile','appBlog']);
+var app = angular.module('appIndex',['appMain','appProfile','appHome']);

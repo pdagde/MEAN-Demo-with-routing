@@ -1,0 +1,7 @@
+.main-panel-header, .main-panel{
+	max-width: calc(100% - 260px);
+}
+
+.minimize .main-panel{
+	max-width: calc(100% - 67px);
+}

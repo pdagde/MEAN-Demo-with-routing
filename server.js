@@ -1,7 +1,6 @@
 /**
  * Created by Pravin on 12/04/17.
  */
-
 var express = require('express'),
     app = express(),
     config = require('./config/development'),
@@ -10,8 +9,8 @@ var express = require('express'),
 
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    path = require('path'),
-    smiliesController = require("./server_side/controller/api/smiliesServer.js");
+    path = require('path');
+    
 
 app.use(bodyParser());
 app.use(bodyParser.json());
@@ -23,7 +22,7 @@ app.get('/',function(req,res){
     // res.render('index',{title : 'Computer Not Working'});
 })
 
-mongoose.connect('mongodb://'+config.db.mongo.host+'/'+ config.db.mongo.db_name);
+mongoose.connect('mongodb://'+config.db.mongo.host+':27017/'+ config.db.mongo.db);
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

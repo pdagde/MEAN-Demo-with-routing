@@ -1,8 +1,8 @@
-<html ng-app='mattricksApp'>
+<html ng-app='calenderCode'>
 <head>
 	<meta charset="utf-8" />
 	<meta name="author" content="sagar chaudhari" />
-	<title>mattricks.in</title>
+	<title>calender code</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
@@ -17,14 +17,19 @@
 	<script src="index.js"></script>
 	
 
-	<script src="../modules/main/index.js"></script>
-	<script src="../modules/main/js/mainController.js"></script>
+	<script src="../modules/auth/index.js"></script>
+	<script src="../modules/auth/js/signUP.js"></script>
+	<script src="../modules/auth/js/login.js"></script>
+	<script src="../modules/auth/js/verifyemail.js"></script>
+	<script src="../modules/auth/services/auth.js"></script>
 
+	
+	
 	<script src="../modules/profile/index.js"></script>
 	<script src="../modules/profile/js/profileController.js"></script>
 
-	<script src="../modules/blog/index.js"></script>
-	<script src="../modules/blog/js/blogController.js"></script>
+	<script src="../modules/home/index.js"></script>
+	<script src="../modules/home/js/homeController.js"></script>
 </head>
 
 <body class="container" >
@@ -32,20 +37,14 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<ul class="nav navbar-nav ">
-				<li class="col-xs-3"><a ui-sref="app.home">Home</a></li>
-				<li class="col-xs-3"><a ui-sref="app.profile">Profile</a></li>
-				<li class="col-xs-3"><a ui-sref="app.blog">Blog</a></li>
-				<li class="col-xs-3"><a ui-sref="app.contact">Contact</a></li>
+				<li class="col-xs-3"><a ui-sref="app.signUp">signUP</a></li>
+				<li class="col-xs-3"><a ui-sref="app.login">login</a></li>
+				<li class="col-xs-3"><a ui-sref="app.home">comming </a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-<div class="row">
-	<div>
-		<div class="well" ui-view></div>
-	</div>
-</div>
-<ng-include src="'modules/layouts/footer.html'"></ng-include>
+		<div ui-view></div>
 </body>
 </html>

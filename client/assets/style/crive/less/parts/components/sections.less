@@ -1,0 +1,198 @@
+// Inner style Sections
+// Changes here will affect all the sections on dashboard - @jay
+
+// ------------------------ Common Section
+
+// ------------------------ Photos Sections
+// .photos-section{
+// 	margin-top: @space * 2;
+// 	img{
+// 		display: block;
+// 	}
+// }
+
+// .image-wrapper{
+// 	position: relative;
+// 	cursor: pointer;
+
+// 	.icon{
+// 		.opacity(0);
+// 		display: none;
+// 		color: @light-color;
+// 		position: fixed;
+// 		right: @space - 4;
+// 		bottom:8px;
+// 		.transition(0.1s);
+// 		z-index: @zindex-small;
+// 	}
+
+// 	&:hover .user-uploaded-photos{
+// 		border: 3px solid lighten(@primary-color, 30%);
+// 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+// 	}
+// } // image-wrapper
+// .user-uploaded-photos{
+// 	border: 3px solid @light-color;
+// 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+// 	margin-bottom: @space;
+// 	.size(100%, 150px);
+// 	object-fit: cover;
+// 	-moz-object-fit: cover;
+// 	-webkit-object-fit: cover;
+// 	-o-object-fit: cover;
+// 	position: relative;
+// 	.transition();
+// } // user-uploaded-photos
+
+// .overlay{
+//   left:0; top:0;
+//   width:100%; height:100%;
+//   display:inline-block;
+//   z-index: @zindex-extra-small;
+//   .transition();
+//   background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%); /* FF3.6+ */
+//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.50)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+//   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* Chrome10+,Safari5.1+ */
+//   background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%); /* Opera 11.10+ */
+//   background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.30) 100%); /* IE10+ */
+//   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.50) 100%); /* W3C */
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+// }
+
+// .image-wrapper icon, .user-image-selector{
+// }
+
+// .user-image-selector{
+// 	background-color: rgba(255, 255, 255, 0.3);
+// 	border: 1px solid rgba(0, 0, 0, 0.5);
+// 	.circle(16px);
+// 	right: @space - 4;
+// 	bottom: 9px;
+// 	.transition(0.1s);
+// 	z-index: @zindex-small;
+// 	&:hover{
+// 		border: 1px solid @success-color;
+// 		.scale(1);
+// 	}
+// }
+
+// .user-image-caption{
+// 	left: @space - 4;
+// 	bottom: -4px;
+// 	color: @light-color;
+// 	z-index: @zindex-small;
+// 	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+// 	font-weight: 400;
+// 	font-size: @font-size-small;
+// 	cursor: default;
+// }
+
+// .user-image-selected{
+// 	.overlay{
+// 		background-color: RGBA(55, 222, 114, 0.5);
+// 	}
+
+// 	.icon{
+// 		.opacity(1);
+// 		display: inline-block;
+// 	}
+// 	.user-image-selector{
+// 		display: none;
+// 		.opacity(0);
+// 	}
+
+// } // user-image-selected
+
+// .user-image-details{
+// 	.icon{
+// 		position: absolute;
+// 	}
+// } // user-image-details
+
+// .photos-options{
+// 	position: fixed;
+// 	.size(250px, auto);
+// 	background-color: @light-color;
+// 	bottom: @space * 2;
+// 	right: @space * 2;
+// 	z-index: @zindex-small;
+// 	.box-shadow(@y: 2px; @color: rgba(0, 0, 0, 0.05));
+// 	border: 1px solid darken(@gray-color, 1%);
+// 	.border-radius(50px);
+// } // .photos-option
+
+// 	.btn-option{
+// 		height: 100%;
+// 		border-radius: 50px 0px 0px 50px;
+// 	}
+
+// 	.options-extra-text{
+// 		padding-top: @space - 5;
+// 		padding-left: @space/2;
+// 		font-weight: 400;
+// 	}
+
+// 	.option-import-list, .photos-action-options{
+// 		margin-top: @space - 5;
+// 		display: inline-block;
+// 		.social-icon {
+// 			font-size: 16px;
+// 		}
+// 		li{
+// 			display: inline-block;
+// 			margin-right: @space/2;
+// 			&:last-child{
+// 				margin-right: 0;
+// 			}
+// 		} // li
+// 	} // option-import-list
+
+// 	.photos-action-options{
+// 		.visibility-hide();
+// 		padding: 1px 1px 1px 1px;
+// 		li{
+// 			vertical-align: middle;
+// 			margin-right: @space;
+// 			a{
+// 				color: @secondary-color;
+// 				&:hover{
+// 					color: @ambience-color;
+// 				}
+// 			} // a
+			
+// 			&:nth-child(2){
+// 				margin-left: @space;
+// 			}
+// 		}
+// 	} // photos-action-options
+
+// 		.selected-count{
+// 			.circle(35px);
+// 			background-color: @ambience-color;
+// 			text-align: center;
+// 			min-width: 35px;
+// 			padding: 6px 3px 0 3px;
+// 			font-size: 16px;
+// 			font-weight: 400;
+// 			color: @light-color;
+// 			text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+// 		} // shows the number of photos selected
+
+
+// 	.user-photos-selected{
+// 		.photos-action-options{
+// 			.visibility-show();
+// 		}
+
+// 		.photos-upload-options{
+// 			.visibility-hide();
+// 		}
+// 	} // user-photos-selected
+
+
+// // -------------------------------------------------- OOCSS
+// .overlay,
+// .user-image-selector,
+// .user-image-caption{
+// 	position: absolute;
+// }

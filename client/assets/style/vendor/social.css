@@ -1,0 +1,114 @@
+/*
+social icon font is adopted from http://www.socicon.com/how.php
+*/
+
+@font-face {
+    font-family: 'social';
+    src: url('../../fonts/social/socicon-webfont.eot');
+    src: url('../../fonts/social/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/social/socicon-webfont.woff') format('woff'),
+         url('../../fonts/social/socicon-webfont.ttf') format('truetype'),
+         url('../../fonts/social/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+}
+
+.social {
+    font-family: 'social' !important;
+}
+
+.social {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'social';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: inherit;
+}
+.social:empty{
+    width: 1em;
+}
+
+.social-twitter:before { content: "a"; }
+.social-facebook:before { content: "b"; }
+.social-google:before { content: "c"; }
+.social-pinterest:before { content: "d"; }
+.social-foursquare:before { content: "e"; }
+.social-yahoo:before { content: "f"; }
+.social-skype:before { content: "g"; }
+.social-yelp:before { content: "h"; }
+.social-feedburner:before { content: "i"; }
+.social-linkedin:before { content: "j"; }
+.social-viadeo:before { content: "k"; }
+.social-xing:before { content: "l"; }
+.social-myspace:before { content: "m"; }
+.social-soundcloud:before { content: "n"; }
+.social-spotify:before { content: "o"; }
+.social-grooveshark:before { content: "p"; }
+.social-lastfm:before { content: "q"; }
+.social-youtube:before { content: "r"; }
+.social-vimeo:before { content: "s"; }
+.social-dailymotion:before { content: "t"; }
+.social-vine:before { content: "u"; }
+.social-flickr:before { content: "v"; }
+.social-500px:before { content: "w"; }
+.social-instagram:before { content: "x"; }
+.social-wordpress:before { content: "y"; }
+.social-tumblr:before { content: "z"; }
+.social-blogger:before { content: "A"; }
+.social-technorati:before { content: "B"; }
+.social-reddit:before { content: "C"; }
+.social-dribbble:before { content: "D"; }
+.social-stumbleupon:before { content: "E"; }
+.social-digg:before { content: "F"; }
+.social-envato:before { content: "G"; }
+.social-behance:before { content: "H"; }
+.social-delicious:before { content: "I"; }
+.social-deviantart:before { content: "J"; }
+.social-forrst:before { content: "K"; }
+.social-playstore:before { content: "L"; }
+.social-zerply:before { content: "M"; }
+.social-wikipedia:before { content: "N"; }
+.social-apple:before { content: "O"; }
+.social-flattr:before { content: "P"; }
+.social-github:before { content: "Q"; }
+.social-chimein:before { content: "R"; }
+.social-friendfeed:before { content: "S"; }
+.social-newsvine:before { content: "T"; }
+.social-identica:before { content: "U"; }
+.social-bebo:before { content: "V"; }
+.social-zynga:before { content: "W"; }
+.social-steam:before { content: "X"; }
+.social-xbox:before { content: "Y"; }
+.social-windows:before { content: "Z"; }
+.social-outlook:before { content: "1"; }
+.social-coderwall:before { content: "2"; }
+.social-tripadvisor:before { content: "3"; }
+.social-appnet:before { content: "4"; }
+.social-goodreads:before { content: "5"; }
+.social-tripit:before { content: "6"; }
+.social-lanyrd:before { content: "7"; }
+.social-slideshare:before { content: "8"; }
+.social-buffer:before { content: "9"; }
+.social-rss:before { content: ","; }
+.social-vkontakte:before { content: ";"; }
+.social-disqus:before { content: ":"; }
+.social-houzz:before { content: "+"; }
+.social-mail:before { content: "@"; }
+.social-patreon:before { content: "="; }
+.social-paypal:before { content: "-"; }
+.social-playstation:before { content: "^"; }
+.social-smugmug:before { content: "¨"; }
+.social-swarm:before { content: "$"; }
+.social-triplej:before { content: "*"; }
+.social-yammer:before { content: "&"; }
+.social-stackoverflow:before { content: "("; }
+.social-drupal:before { content: "#"; }
+.social-odnoklassniki:before { content : ".";}
+.social-android:before { content: "_"; }
+.social-meetup:before { content: "]"; }
+.social-persona:before { content: ")"; }

@@ -4,10 +4,10 @@
 
 'use strict';
 
-var App = angular.module('mattricksApp',['ui.router','appIndex']);
+var App = angular.module('calenderCode',['ui.router','appIndex']);
 
 App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
-				$urlRouterProvider.otherwise("/app/home");
+				$urlRouterProvider.otherwise("/app/signUp");
 				
 				$stateProvider
                     .state('app', {

@@ -1,0 +1,487 @@
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type=checkbox], input[type="radio"]{
+  position: relative;
+  //right: 10px;
+  width: auto;
+  // opacity: 0;
+  cursor: pointer;
+  //display: none;
+}
+
+
+// ------------------------------------ Radio
+input[type="radio"]{
+   display: inline-block;
+   & + label{
+    padding: 20px 15px 10px 0px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    //margin: @space/2;
+    font-weight: 400;
+    color: darken(@dark-gray-color, 20%);
+    &:before, &:after{
+      content: "";
+      .border-radius(50%);
+      .transition();
+    }
+    &:before{
+      position: relative;
+      display: block;
+      float: left;
+      //margin-right: @space/3;
+      background-color: transparent;
+      .size(@space, @space);
+      //border: 1px solid @dark-gray-color;
+    } // :before
+
+    &:after{
+      position: absolute;
+      .size(@space - @space/4, @space - @space/4);
+      top: 1px;
+      left: -13px;
+      visibility: hidden;
+      .opacity(0);
+      //background-color: @primary-color;
+      transform: scale(0);
+    } // :after
+  } // label
+
+  &:hover, &:focus{
+    & + label:before{
+      transform: scale(1.2);
+    }
+  } // :hover and :focus
+
+  &:checked{
+    & + label {
+      &:after{
+        visibility: visible;
+        .opacity(1);
+        transform: scale(1);
+        .transition();
+      } // :after
+
+      &:before{
+        transform: scale(1);
+        border-color: @primary-color;
+
+      } // :before
+
+    } // checked + label
+  } // :checked
+} // radio input
+
+
+
+// ------------------------------ Checkbox
+input[type=checkbox]{
+  &:checked + .checkbox:after, &:checked:hover + .checkbox:after{
+    .opacity(1);
+    border-left-color: @link-color;
+    border-bottom-color: @link-color;
+  } // checked opacity
+
+
+  &:hover + .checkbox:after{
+    .opacity(0.4);
+  } // hover
+
+  &:hover + .checkbox:before{
+    transform: scale(1.1);
+  }
+  &:checked:hover + .checkbox:before{
+    transform: scale(1);
+  }
+
+  & + .checkbox, & + .checkbox:before, & + .checkbox:after{
+    .transition;
+  }
+
+  & + .checkbox{
+    position: relative;
+    float: left;
+    left: 0;
+    width: auto;
+    cursor: pointer;
+    padding-left: @space + @space/4;
+    color: darken(@dark-gray-color, 20%);
+    font-weight: 400;
+
+    &:before{
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: 0px;
+      .size(@space, @space);
+      background: @light-color;
+      content: '';
+      .border-radius(3px);
+      border: 1px solid @dark-gray-color;
+    } // before
+
+    &:after{
+      .rotate(-45deg);
+      display: block;
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      .size(@space/2, @space/4);
+      .opacity(0);
+      background-color: transparent;
+      border-left: 2px solid @dark-gray-color;
+      border-bottom: 2px solid @dark-gray-color;
+      content: "";
+    } // after
+  } // .checkbox
+
+  &:checked + .checkbox:before{
+    .border-radius(50%);
+    border-color: @link-color;
+  }
+
+} // checkbox end
+
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: @font-size-small;
+  line-height: inherit;
+  color: @dark-gray-color;
+  border: 0;
+  border-bottom: 1px solid @gray-color;
+  margin-top: @space + @space/2;
+}
+input + legend, textarea + legend{
+  margin-top: @space/2;
+}
+
+// ------------------------------------- input-brick
+// It's a parent class of input group with floating label
+.input-brick{
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 0 0;
+  width: 100%;
+  margin-top: @space + 2;
+
+
+  .input{
+    .transition();
+    box-sizing: border-box;
+  }
+} // input-brick end
+  .input{
+    input::placeholder{
+      color: #4a90e2;
+    }
+  }
+  
+  label{ // floating label above input
+  cursor: text;
+  .transition();
+  z-index: @zindex-large;
+  font-weight: 600;
+  font-size: @font-size + 1;
+ }
+
+  &:hover label{
+    color: lighten(@ambience-color, 20%);
+  }
+
+  &.active label{
+    top: -15px;
+    color: @secondary-color;
+    font-size: 11px;
+    left: 2px;
+  }
+
+
+
+// --------------------- Main input design
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="url"],
+textarea,
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"]{
+ // display: block;
+  .size(70%, 48px);
+  background-color: @light-color;
+  .border-radius;
+  color: darken(@dark-gray-color, 10%);
+  border: 1px solid rgba(213, 219, 226, 0.5);
+  padding: 2px 5px;
+  padding-left: 10px;
+  .transition;
+  font-size: @font-size + 2;
+  opacity: 0.82;
+  font-weight: normal;
+  position: relative;
+  //.border-radius(2px);
+
+  &:hover{
+    border-color: rgba(213, 219, 226, 1) ;
+  }
+  &:focus{
+    border-color: rgba(213, 219, 226, 1) ;
+    color: @ambience-color;
+    outline: none;
+  }
+  &::placeholder{
+    color: @placeholder-color;
+  }
+} // input/textarea
+
+
+// ------------------- transparent inputs
+// overcoming to default settings with !important
+.trans-form{
+  
+  input{
+    background-color: rgba(255, 255, 255, 0.6) !important;
+
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.7) !important;
+      border-color: rgba(213, 219, 226, 0.4) !important;
+    } // hover
+
+    &:focus{
+      background-color: @light-color !important;
+      border-color:  rgba(213, 219, 226, 0.4) !important;
+    }
+  } // input
+
+  label{
+    color: lighten(@ambience-color, 10%);
+  }
+} //.trans-form
+
+
+// ------------------- input-states
+.input-state{
+  &.success{
+    label{
+      color: lighten(@success-color, 10%);
+    }
+    input{
+      border-color: lighten(@success-color, 20%);
+    }
+  } // .success
+
+  &.error{
+    label{
+      color: @error-color;
+    }
+    input{
+      border-color: lighten(@error-color, 20%);
+    }
+  } // .error
+} // input-state
+
+/*.input-state{ // we use this when we want to show error / success state
+  position: relative;
+  margin-top: @space + @space/2;
+  &::before{
+    position: absolute;
+    font-weight: 400;
+    font-size: 11px;
+    top: -(@space);
+    left: 0;
+    text-align: left;
+  } // before
+
+  &.error{
+    input[type="text"],
+    textarea,
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"]{
+      border-color: @error-color;
+    } // input
+    &::before{
+      content: attr(data-error);
+      color: @error-color;
+    } // before
+  } // error
+
+  &.success{
+    input[type="text"],
+    textarea,
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"]{
+      border-color: @success-color;
+    } // input
+    &::before{
+      content: attr(data-success);
+      color: @success-color;
+    } // before
+  } // success
+
+  & + .btn{
+    margin-top: @space;
+  } // input-state + button
+
+} // input-stats
+*/
+
+
+textarea{
+  .min-height(100px);
+  resize: none;
+  font-size: @font-size + 2;
+  opacity: 0.82;
+  padding: 5px 10px;
+  line-height: 1.38;
+  //padding-left: 10px;
+}
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  .box-sizing(border-box);
+}
+
+
+
+// Set the height of file controls to match text inputs
+input[type="file"] {
+  display:inline-block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+// Adjust output element
+output {
+  display: block;
+  padding-top: 7;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @light-color;
+}
+
+//event-form1 form2
+.form-control {
+  label{
+    padding: 20px 0px 10px;
+    display: inline-block;
+    color: #000;
+  }
+  margin: 0px auto;
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"]{
+    .size(100%, @input-height);
+      display: block;
+    }
+    .size(70%, auto);
+  //padding: 6px 10px;
+  font-size: @font-size + 3;
+  line-height: @line-height;
+  color: lighten(@dark-color, 20%);
+  background-color: @light-color;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  //border: 1px solid @gray-color;
+  .border-radius;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+  // Placeholder
+  .placeholder();
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: @cursor-disabled;
+    background-color: @disabled-input-bg;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
+
+  // Reset height for `textarea`s
+  textarea& {
+    height: auto;
+  }
+  .password{
+    input{
+      .size(100%,35px);
+      border-radius: 5px;
+    }
+  }
+  .share-event-public{
+    input{
+      width: 80%;
+    }
+  }
+  .share-event{
+    input{
+      width: 75%;
+    }
+  }
+} // form-control
+
+.checkbox-input{ // input box activate on click of checkbox
+  & ~ input{
+    opacity: 0;
+    visibility: hidden;
+    .transition();
+    margin-top: 10px;
+  }
+  &:checked ~ input{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 10px;
+  } // checked
+
+} // checkbox-input
+
+

@@ -1,0 +1,104 @@
+// Base CSS for logged out static pages.
+//Changes here will effect globally in logged out pages. - @jay 
+
+
+@import "parts/variables.less";
+@import "parts/mixins.less";
+
+@import "parts/components/normalize.less";
+@import "parts/components/grid.less";
+@import "parts/components/header.less";
+@import "parts/components/buttons.less";
+@import "parts/components/component-animations.less";
+@import "parts/components/forms.less";
+@import "parts/components/modal.less";
+@import "parts/components/justified.less";
+@import "parts/components/footer.less";
+@import "parts/components/utility.less";
+@import "parts/components/responsive.less";
+
+@import "../../vendor/icons.css";
+@import "../../vendor/social.css";
+
+// --------------------------------------------------- for index page
+
+.index-1slide{
+	.square(100%);
+	.size(100vw, 100vh);
+	background: #fff url(../../../img/index-bg.jpg) center no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	position: relative;
+}
+	.index-info{
+		.absolute-center(80%,300px);
+	}
+	.center-wrapper{
+		max-width: 600px;
+		.center-block();
+	}
+
+	.password-lost{ // used for forgot password link
+		margin-top: @space;
+		a{
+			color: @dark-gray-color;
+			&:hover{
+				color: @ambience-color;
+			}
+		} // a
+	} // password-lost
+
+	.main-tagline{
+		font-size: @font-size * 4;
+		text-align: center;
+		font-weight: 400;
+		text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+		font-family: @font-family-2;
+		color: @light-color;
+		letter-spacing: 0.3px;
+		margin-bottom: @space * 3;
+		.transition();
+	} // main-tagline
+
+	.below-form-text{
+		color: rgba(255, 255, 255, 0.8);
+		text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+		letter-spacing: 0.3px;
+	}
+
+
+// ----------------------------------- Responsive-desktop
+
+@media(min-width: @screen-md) and (max-width: @screen-lg){
+	.main-tagline{
+		font-size: @font-size * 3;
+	}
+}
+
+
+// ----------------------------------- Responsive-tab
+
+@media(min-width: @screen-sm) and (max-width: @screen-md){
+	.main-tagline{
+		font-size: (@font-size * 2) + 3;
+	}
+}
+
+
+// ----------------------------------- Responsive-mobile
+@media(max-width: @screen-xs){
+	.main-tagline{
+		font-size: @font-size * 2;
+		margin-bottom: @space * 2;
+	}
+}
+
+
+// ----------------------------------- Responsive < 320px
+@media(max-width: 320px){
+	.main-tagline{
+		font-size: @font-size + 5;
+	}
+}
+
+

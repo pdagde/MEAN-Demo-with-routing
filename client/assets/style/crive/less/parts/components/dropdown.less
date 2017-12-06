@@ -1,0 +1,237 @@
+.dropdown{
+	position: relative;
+}
+
+.dropdown-menu{
+	position: absolute;
+	top: -140px;
+	z-index: @zindex-small;
+	display: none;
+  //opacity: 0;
+	text-align: right;
+	background-color: @light-color;
+	//border: 1px solid @gray-color; // IE8 Fallback
+	border: 1px solid darken(@gray-color, 10%);
+	//.box-shadow(@x: 2px; @y:3px; @blur: 7px; @color: @gray-color);
+	background-clip: padding-box;
+  .border-radius(@dropdown-border-radius);
+  padding: @space/2 0;
+  .transition();
+
+	&.pull-right{
+		right: 0;
+		left: auto;
+	}
+
+  > li{
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  } // li
+
+  > li > a {
+    display: block;
+    padding: @space/2 @space * 2 @space/2 @space * 4;
+    clear: both;
+    line-height: @line-height;
+    color: #354052;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    border-bottom: 1px solid @gray-color;
+    display: block;
+  }
+  > li:last-child > a{
+    border-bottom: none;
+  }
+
+  &:after, &:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-right-radius: 30%;
+  } 
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: @light-color;
+    border-width: 7px; 
+    margin-left: -7px; 
+  }
+  &:before { 
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: darken(@gray-color, 10%);
+    border-width: 9px;
+    margin-left: -9px; 
+  }
+} // dropdown menu
+
+.dropdown-menu > li:first-child:hover .dropdown-menu:after{
+  border-bottom-color: lighten(@gray-color, 2%);
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: lighten(@dark-color, 30%);
+    background-color: lighten(@gray-color, 2%);
+  }
+}
+
+
+// Active state
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: darken(@link-color, 10%);
+    text-decoration: none;
+    outline: 0;
+    background-color: lighten(@gray-color, 5%);
+    color: #ed1c24;
+  }
+}
+
+
+// Disabled state
+//
+// Gray out text and ensure the hover/focus state remains gray
+
+.dropdown-menu > .disabled > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @disabled-color;
+  }
+
+  // Nuke hover/focus effects
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none; // Remove CSS gradient
+    .reset-filter();
+    cursor: @cursor-disabled;
+  }
+} // dropdown disabled
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: @font-size-small;
+  line-height: @line-height;
+  color: @gray-color;
+  white-space: nowrap; // as with > li > a
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  background-color: transparent;
+  z-index: @zindex-extra-small;
+}
+.active + .dropdown .dropdown-backdrop{
+  display: block;
+}
+
+// Right aligned dropdowns
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  // Reverse the caret
+  .caret {
+    border-top: 0;
+    border-bottom: @caret-border-width solid;
+    content: "";
+  }
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 1px;
+  }
+} // navbar fixed bottom
+
+.dropdown-trigger{
+  cursor: pointer;
+  position: relative;
+  &.active{
+    & ~ .dropdown .dropdown-menu{
+      margin-top: @space/2;
+      opacity: 1;
+      display: block;
+      &:after, &:before{
+        left: 50%;
+      } 
+      //&:after{
+      //  margin-left: -(3.5);
+      //}
+      //&:before{
+      //  margin-left: -(4.5);
+      //} // Commented out due to mismatching issue on dropdown on internal pages and dropdown-right was not working 
+    } // dropdown-menu
+  } // .active
+} // dropdown-trigger end 
+
+.dropdown-menu-right {
+  left: auto; // Reset the default from `.dropdown-menu`
+  right: 0;
+  &:after, &:before{
+    right: @space/2 !important;
+    left: auto;
+  }
+  &:before{
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &:after{
+    margin-left: auto;
+    margin-right: @space/8;
+  }
+} // .dropdown-menu-right
+
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+  &:after, &:before{
+    left: @space/2 !important;
+    right: auto;
+  }
+  &:before{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  &:after{
+    margin-right: auto;
+    margin-left: @space/8;
+  }
+} // dropdown left
+
+
+@media (min-width: @grid-float-breakpoint) {
+  .navbar-right {
+    .dropdown-menu {
+      .dropdown-menu-right();
+    }
+    // Necessary for overrides of the default right aligned menu.
+    // Will remove come v4 in all likelihood.
+    .dropdown-menu-left {
+      .dropdown-menu-left();
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// this file contains style for footer
+// changes here will effect on footer all over the website - @jay
+
+// ----------------------------- Footer landing page
+footer{
+	background: @bg-color;
+	.main-logo{
+		padding-top: 12px;
+		a{
+			img{
+				display: inline-block;
+				font-size: 10px;
+				max-height: 40px;
+				.transition();
+			}
+			h2{
+				font-size: (@font-size * 2) - 8;
+				display: inline-block;
+				color: rgba(74, 74, 74, 0.6);
+			}
+			&:hover{
+				.opacity(0.6);
+			}
+		}
+	}
+	h4{
+		font-size: @font-size + 2;
+		color:@footer-color;
+	}
+	ul{
+		margin-left: -40px;
+		padding-top: 10px;
+		li{
+			padding-bottom: 15px;
+			img{
+				padding-right: 15px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+	.border-bottom{
+		border-bottom: 1px solid rgba(151, 151, 151, 0.5);
+	}
+	address{
+		font-style: normal;
+		font-size: @font-size + 2;
+		color: @footer-color;
+		padding-top: 30px;
+		padding-left: 20px;
+	}
+	.copyright{
+		color: #4a4a4a;
+		opacity: 0.5;
+	}
+}
+
+//footer css of home-epmty-state
+.empty-home-footer{
+ 	bottom: 0px;
+    position: absolute;
+    width: 100%;
+	color: #97a4b1;
+}
+footer{
+	.base{
+		//padding:10px 20px;
+ 	p{
+ 	font-size: 18px;
+ 	color: #97a4b1;
+ 	}
+ 	.cross-icon{
+ 		padding: 18px 10px;
+ 		i{
+   font-size: @font-size * 2;
+   cursor: pointer;
+   }
+ 	}
+ 	.footer-btn{
+ 		padding: 0px (@space * 2);
+ 	}
+ }
+}

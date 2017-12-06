@@ -1,0 +1,188 @@
+// Contains code of responsive site - @Jay
+
+@media(max-width: @screen-extra-small-max){
+	body{
+		font-size: @font-size-small;
+	}
+	.tab-head-secondary{
+		li{
+			padding: 5px 0;
+			min-width: @space;
+		}
+	} // tab head secondary
+	.btn{
+		.button-size(8px; 32px; @font-size-small; 1.3; 3px);
+		.min-width(50px);
+	}
+	h1, .h1{
+	  font-size: @font-size + 8;
+	}
+	h2, .h2{
+	  font-size: @font-size + 6;
+	}
+	h3, .h3{
+	  font-size: @font-size + 4;
+	}
+	h4, .h4{
+	  font-size: @font-size + 2;
+	}
+	h5, .h5{
+	  font-size: @font-size;
+	}
+	h6, .h6{
+	  font-size: @font-size-small;
+	}
+
+	.justified{
+		.input-brick{
+			border-right: none;
+			display: block;
+			margin-bottom: @space;
+			input, &:last-child input{
+				.border-radius(3px);
+			}
+		} // input-brick
+	} // justified
+	
+	.wrapper{
+		padding-left: 2% !important;
+		padding-right: 2% !important;
+	}
+	header{
+		padding: 5px 0px;
+		.ion-android-menu{
+			display: block;
+			font-size: (@font-size * 2) ;
+			padding: 18px 10px;
+			color:	#000;
+			opacity: 0.3;
+		}
+		.inputWrapper{
+			.search-icon{
+				float: right;
+				padding-top: 10px;
+			}
+			.ion-ios-search-strong{
+				font-size: (@font-size * 2) - 4;
+			}
+		}
+		.main-logo{
+			padding: 8px 0px 5px;
+			a{
+				img{
+					max-height: 35px !important;
+					margin-top: -22px;
+				}
+				h2{
+					font-size: @font-size + 3 !important;
+				}
+			}
+		}
+	}
+	.event-card{
+		width: 300px !important;
+	}
+	.small-wrapper{
+		width: 275px;
+	}
+	.map{
+			width: 297px !important;
+		}
+	.form-control{
+			width: 95%;
+			input,textarea{
+				font-size: @font-size;
+			}
+	}
+		.u-img-wrapper{
+			width: 90%;
+		}
+		.head-close-icon{
+			i{
+				font-size: (@font-size * 2) + 2;
+			}
+		}
+		.input-para{
+			position: initial !important;
+		}
+		.bottom-wrapper{
+			text-align: center;
+			img{
+			display: none;
+			}
+		}
+		.contact-form-border{
+			width:90%;
+		}
+	} // @media - phone
+
+@media(min-width: @screen-extra-small) and (max-width: @screen-small-max){
+	body{
+		font-size: @font-size - 1;
+	}
+	.btn{
+		.button-size(4px; 8px; @font-size - 1; 1.3; 30px);
+		.min-width(50px);
+	}
+	h1, .h1{
+	  font-size: @font-size + 9;
+	}
+	h2, .h2{
+	  font-size: @font-size + 7;
+	}
+	h3, .h3{
+	  font-size: @font-size + 5;
+	}
+	h4, .h4{
+	  font-size: @font-size + 3;
+	}
+	h5, .h5{
+	  font-size: @font-size + 1;
+	}
+	h6, .h6{
+	  font-size: @font-size - 1;
+	}
+	.tab-head-secondary{
+		li{
+			padding: 0;
+			margin-right: @space/2;
+			min-width: @space;
+			height: @space - 7;
+		}
+	} // tab head secondary
+} // @media - phone to tab
+
+@media(max-width: @screen-small-max){
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{padding-left: @grid-gutter/2;padding-right: @grid-gutter/2;}
+	.main-header{
+		margin-bottom: @space/2;
+	}
+	h1, h2, h3{
+		margin-top: @space/3;
+		margin-bottom: @space/3;
+	}
+	h4, h5, h6{
+		margin-top: @space/4;
+		margin-bottom: @space/4;
+	}
+	.tab-head{
+		height: 26px;
+		white-space: nowrap;
+		overflow-x: auto;
+	}
+	.accordion-header{
+		font-size: inherit;
+		.accordion-head{
+			padding: @space/2;
+			padding-right: @space;
+			&:after{
+				right: @space/3;
+			}
+		} // accordion head
+	} // accordion header
+	.justified li:last-child{
+		border-right: 1px solid #ebebeb;
+	}
+
+} // @media - tab
+
